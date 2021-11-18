@@ -181,7 +181,7 @@ def event_handle(event):
            replyObj = TextSendMessage(text=msg)
            line_bot_api.reply_message(rtoken, replyObj)
    elif msgType == "image":
-        try:
+       try:
             message_content = line_bot_api.get_message_content(event['message']['id'])
             i = Image.open(BytesIO(message_content.content))
             filename = event['message']['id'] + '.jpg'
