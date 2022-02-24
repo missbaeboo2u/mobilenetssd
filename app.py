@@ -150,13 +150,7 @@ def event_handle(event,json_line):
     if msgType == "text":
         msg = str(event["message"]["text"])
         if (msg == "สวัสดีค่ะ") :
-            replyObj = TextSendMessage(text="- ส่งลายที่ต้องการมาได้เลยค้าบ (ถ้าเป็นลิ้งค์จะดีมาก)
-                                       
-                                             - รอทางร้านแจ้งยอด
-
-                                             - ส่งสลิปพร้อมกับqr code หรือ ไอดีไลน์
-
-                                             - รอรับของได้เลย")
+            replyObj = TextSendMessage(text="สวัสดี")
             line_bot_api.reply_message(rtoken, replyObj)
         elif (msg == "เเพรวพราวจัง") :
             replyObj = TextSendMessage(text="ขอบคุณที่เเจ้งให้ทราบ")
